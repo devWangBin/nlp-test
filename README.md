@@ -106,17 +106,11 @@ Fine-tuning来完成中文命名实体识别。
 式 O O
 。 O O
 ```
-
 2、参数设置如下：模型输出见 ./nlp-test/BERT-BiLSTM-CRF-NER/model02
-
 ![](media/ddf38eaa9a70eef66ef36148c52b2be3.png)
-
 训练集被遍历两遍，学习率0.0001，5 epochs，batch size为64，一共训练了487个batch：
-
 ![](media/6677585197dc5b22c22cfee882c8b53c.png)
-
 最终准确率：86.12%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
-
 ```
 全 O O
 市 O O
@@ -141,7 +135,6 @@ Fine-tuning来完成中文命名实体识别。
 ” O O
 。 O O
 ```
-
 题目2——中文ERE：
 ================
 
@@ -172,7 +165,6 @@ Forms)](<https://github.com/lemonhu/open-entity-relation-extraction>)
 **4.  输入数据：**
 
 使用上题数据集中的验证集部分(dev,txt)，一共684行。
-
 eg:
 
 *南斯拉夫队教练桑特拉奇说，赛前，我对我的队员说，伊朗队是个强队，没人信。*
