@@ -83,10 +83,10 @@ Fine-tuning来完成中文命名实体识别。
 
 1.  参数设置如下：模型输出见 ./nlp-test/BERT-BiLSTM-CRF-NER/model01
 
-![1](https://github.com/devWangBin/nlp-test/blob/master/media/662898347e6dd24088c339cfdcf380cd.png)
+![image](https://github.com/devWangBin/nlp-test/blob/master/media/662898347e6dd24088c339cfdcf380cd.png)
 训练集被遍历两遍，学习率0.001，2 epochs，batch size为64，一共训练了195个batch：
 
-![2](https://github.com/devWangBin/nlp-test/blob/master/media/0be8538d7981c2646d081f2eac33c1bd.png)
+![image](https://github.com/devWangBin/nlp-test/blob/master/media/0be8538d7981c2646d081f2eac33c1bd.png)
 最终准确率：86.20%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
 ```
 神 B-ORG O
@@ -106,10 +106,10 @@ Fine-tuning来完成中文命名实体识别。
 ```
 2、参数设置如下：模型输出见 ./nlp-test/BERT-BiLSTM-CRF-NER/model02
 
-![3](https://github.com/devWangBin/nlp-test/blob/master/media/ddf38eaa9a70eef66ef36148c52b2be3.png)
+![image](https://github.com/devWangBin/nlp-test/blob/master/media/ddf38eaa9a70eef66ef36148c52b2be3.png)
 训练集被遍历两遍，学习率0.0001，5 epochs，batch size为64，一共训练了487个batch：
 
-![4](https://github.com/devWangBin/nlp-test/blob/master/media/6677585197dc5b22c22cfee882c8b53c.png)
+![image](https://github.com/devWangBin/nlp-test/blob/master/media/6677585197dc5b22c22cfee882c8b53c.png)
 最终准确率：86.12%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
 ```
 全 O O
@@ -173,7 +173,7 @@ eg:
 
 **5.  模型输出结果：triple_result.txt**
 
-![5](https://github.com/devWangBin/nlp-test/blob/master/media/efb3564b466fa95fc96911e8a38753bd.png)
+![image](https://github.com/devWangBin/nlp-test/blob/master/media/efb3564b466fa95fc96911e8a38753bd.png)
 eg:
 
 triple: 布拉泽维奇 怕 牙买加人
