@@ -81,7 +81,7 @@ Fine-tuning来完成中文命名实体识别。
 
 几次训练过程展示如下：
 
-1.  参数设置如下：模型输出见 ./nlp-test/BERT-BiLSTM-CRF-NER/model01
+1.  参数设置如下：模型输出见 ./NER/model01/
 
 ![image](https://github.com/devWangBin/nlp-test/blob/master/media/662898347e6dd24088c339cfdcf380cd.png)
 训练集被遍历两遍，学习率0.001，2 epochs，batch size为64，一共训练了195个batch：
@@ -104,7 +104,7 @@ Fine-tuning来完成中文命名实体识别。
 式 O O
 。 O O
 ```
-2、参数设置如下：模型输出见 ./nlp-test/BERT-BiLSTM-CRF-NER/model02
+2、参数设置如下：模型输出见 ./NER/model02/
 
 ![image](https://github.com/devWangBin/nlp-test/blob/master/media/ddf38eaa9a70eef66ef36148c52b2be3.png)
 训练集被遍历两遍，学习率0.0001，5 epochs，batch size为64，一共训练了487个batch：
@@ -171,7 +171,7 @@ eg:
 
 *南斯拉夫队素质高、技术精，不要忘了，他们有许多优秀的球员在为各欧洲俱乐部踢球。*
 
-**5.  模型输出结果：triple_result.txt**
+**5.  模型输出结果：./ERE/triple_result.txt**
 
 ![image](https://github.com/devWangBin/nlp-test/blob/master/media/efb3564b466fa95fc96911e8a38753bd.png)
 eg:
