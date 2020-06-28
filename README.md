@@ -107,9 +107,13 @@ Fine-tuning来完成中文命名实体识别。
 。 O O
 ```
 2、参数设置如下：模型输出见 ./nlp-test/BERT-BiLSTM-CRF-NER/model02
+
 ![](media/ddf38eaa9a70eef66ef36148c52b2be3.png)
+
 训练集被遍历两遍，学习率0.0001，5 epochs，batch size为64，一共训练了487个batch：
+
 ![](media/6677585197dc5b22c22cfee882c8b53c.png)
+
 最终准确率：86.12%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
 ```
 全 O O
@@ -176,7 +180,6 @@ eg:
 ![](media/efb3564b466fa95fc96911e8a38753bd.png)
 
 eg:
-
 triple: 布拉泽维奇 怕 牙买加人
 
 triple: 英格兰队 英格兰队的 希勒
