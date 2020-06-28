@@ -178,7 +178,11 @@ eg:
 triple：(entity1 relation entity2)
 
 triple: 布拉泽维奇 怕 牙买加人
+
 triple: 英格兰队 英格兰队的 希勒
+
 triple: 厄尔头球 扳平比分 克罗地亚队
+
 triple: 厄尔头球 扳平比分 斯塔尼
+
 triple: 厄尔头球 扳平比分 牙买加队
