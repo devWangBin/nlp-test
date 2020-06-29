@@ -16,20 +16,17 @@ nlp-test
 题目1——中文NER：
 ================
 
-命名实体识别（英语：Named Entity
-Recognition，简称NER）是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等，以及时间、数量、货币、比例数值等文字。
+命名实体识别（英语：Named Entity Recognition，简称NER）是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等，以及时间、数量、货币、比例数值等文字。
 
 **1. 模型：**
 
-BERT-BiLSTM-CRF-NER：在BLSTM-CRF模型上用谷歌的BERT
-Fine-tuning来完成中文命名实体识别。
+BERT-BiLSTM-CRF-NER：在BLSTM-CRF模型上用谷歌的BERT Fine-tuning来完成中文命名实体识别。
 
 **2. 参考资料：**
 
 [BLSTM-CRF模型git链接](https://github.com/macanv/BERT-BiLSTM-CRF-NER)
 
-[BLSTM-CRF模型介绍博客](<https://blog.csdn.net/macanv/article/details/85684284>
-)
+[BLSTM-CRF模型介绍博客](<https://blog.csdn.net/macanv/article/details/85684284>)
 
 [bert模型项目git链接](https://github.com/google-research/bert)
 
@@ -71,23 +68,18 @@ Fine-tuning来完成中文命名实体识别。
 
 **6. 调参训练模型：**
 
-由于是用自己个人PC跑的加上时间约束，所以没有进行充分地调参，未能使模型结果达到最优，而且为了加速训练，删除了较长的的句子。
+由于是用自己个人PC跑的加上时间约束，所以没有进行充分地调参，未能使模型结果达到最优，而且为了加速训练，删除了较长的的句子。几次训练过程展示如下：
 
-几次训练过程展示如下：
-
-1.  参数设置如下：模型输出见 ./NER/model01/
+1.参数设置如下：模型输出见 ./NER/model01/
 
 ![image](media/78b01dba54ca6b6a2807df7b01638aec.shtml)
-
-image
 
 训练集被遍历两遍，学习率0.001，2 epochs，batch size为64，一共训练了195个batch：
 
 ![image](media/29c5319de7e09c3e59cc4748d1d4f0e1.shtml)
 
-image
-
 最终准确率：86.20%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
+
 ~~~
 神 B-ORG O
 州 I-ORG O
@@ -104,19 +96,17 @@ image
 式 O O
 。 O O
 ~~~
-2、参数设置如下：模型输出见 ./NER/model02/
+
+2.参数设置如下：模型输出见 ./NER/model02/
 
 ![image](media/b9c6d4d961c05503b9b9e6e79519f121.shtml)
-
-image
 
 训练集被遍历两遍，学习率0.0001，5 epochs，batch size为64，一共训练了487个batch：
 
 ![image](media/c111ce9269f4c4922c6adf1004129252.shtml)
 
-image
-
 最终准确率：86.12%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
+
 ~~~
 全 O O
 市 O O
@@ -141,14 +131,14 @@ image
 ” O O
 。 O O
 ~~~
+
 **7. 潜在的问题：**
 
 从输出的标注label也可以看出来，虽然从标注的准确率来看能达到85%以上，但由于训练不充分，参数没有调到较优的原因，所以模型对绝大部分字的标注都是“O”，也可能是因为原数据集的分布很不均匀而导致的。
 
 **8. 如何提高/优化：**
 
-1.  进一步调参优化，具体可以考虑增大LSTM网络层内部的隐藏层向量维度，即模型中LSTM_SIZE参数，或调整学习率、dropout
-    rate等模型参数。
+1.  进一步调参优化，具体可以考虑增大LSTM网络层内部的隐藏层向量维度，即模型中LSTM_SIZE参数，或调整学习率、dropout rate等模型参数。
 
 2.  针对标注的实体在数据中分布不均匀的情况，在该模型基础上增加attention机制，使模型重点关注句子中实体的识别建模，提高模型performance。
 
@@ -164,9 +154,7 @@ image
 
 **2. 参考资料：**
 
-[参考的开源项目，根据依存句法分析定义了中文的依赖语义范式DSNF(Dependency
-Semantic Normal
-Forms)](https://github.com/lemonhu/open-entity-relation-extraction)
+[参考的开源项目，根据依存句法分析定义了中文的依赖语义范式DSNF(Dependency Semantic Normal Forms)](https://github.com/lemonhu/open-entity-relation-extraction)
 
 [论文链接](https://dl.acm.org/doi/10.1145/3162077)
 
@@ -192,8 +180,6 @@ Forms)](https://github.com/lemonhu/open-entity-relation-extraction)
 
 ![image](media/85708c327011951a1212ad5c58c06ba6.shtml)
 
-image
-
 eg: triple：(entity1 relation entity2)
 
 triple: 布拉泽维奇 怕 牙买加人
@@ -209,11 +195,9 @@ triple: 厄尔头球 扳平比分 牙买加队
 
 **6. 潜在的问题：**
 
-
 1.  模型使用的是无标签数据，直接输出提取的关系，所以没有可以进行对比基线指标，无法直接对模型输出做出评价，后期可以考虑横向对比其它模型的输出结果；
 
 2.  单从输出结果看，所抽取的实体关系三元组有一些少，六百多个句子只有约60组，可能存在提取不全面与充分的问题。
-
 
 **7. 如何提高/优化：**
 
