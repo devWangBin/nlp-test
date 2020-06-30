@@ -72,11 +72,11 @@ BERT-BiLSTM-CRF-NER：在BLSTM-CRF模型上用谷歌的BERT Fine-tuning来完成
 
 1.参数设置如下：模型输出见 ./NER/model01/
 
-![image](media/78b01dba54ca6b6a2807df7b01638aec.shtml)
+![image](https://github.com/devWangBin/nlp-test/tree/master/img/01.png)
 
 训练集被遍历两遍，学习率0.001，2 epochs，batch size为64，一共训练了195个batch：
 
-![image](media/29c5319de7e09c3e59cc4748d1d4f0e1.shtml)
+![image](https://github.com/devWangBin/nlp-test/tree/master/img/02.png)
 
 最终准确率：86.20%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
 
@@ -99,11 +99,11 @@ BERT-BiLSTM-CRF-NER：在BLSTM-CRF模型上用谷歌的BERT Fine-tuning来完成
 
 2.参数设置如下：模型输出见 ./NER/model02/
 
-![image](media/b9c6d4d961c05503b9b9e6e79519f121.shtml)
+![image](https://github.com/devWangBin/nlp-test/tree/master/img/03.png)
 
 训练集被遍历两遍，学习率0.0001，5 epochs，batch size为64，一共训练了487个batch：
 
-![image](media/c111ce9269f4c4922c6adf1004129252.shtml)
+![image](https://github.com/devWangBin/nlp-test/tree/master/img/04.png)
 
 最终准确率：86.12%，模型输出示例如下：第一列原句，第二列为标签，第三列为模型输出标签：
 
@@ -178,7 +178,7 @@ BERT-BiLSTM-CRF-NER：在BLSTM-CRF模型上用谷歌的BERT Fine-tuning来完成
 
 **5. 模型输出结果：./ERE/triple_result.txt**
 
-![image](media/85708c327011951a1212ad5c58c06ba6.shtml)
+![image](https://github.com/devWangBin/nlp-test/tree/master/img/05.png)
 
 eg: triple：(entity1 relation entity2)
 
